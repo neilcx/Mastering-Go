@@ -9,8 +9,11 @@ import (
 
 func main() {
 	myVersion := runtime.Version()
-	major := strings.Split(myVersion, ".")[0][2]
+	fmt.Println(myVersion)
+	major := strings.Split(myVersion, ".")[0][2] //gox, x is in position [2]
+	fmt.Println( string(major))
 	minor := strings.Split(myVersion, ".")[1]
+	fmt.Println(minor)
 	m1, _ := strconv.Atoi(string(major))
 	m2, _ := strconv.Atoi(minor)
 

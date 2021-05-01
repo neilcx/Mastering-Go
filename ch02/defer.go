@@ -34,3 +34,7 @@ func main() {
 	d3()
 	fmt.Println()
 }
+
+//1 2 3
+//0 0 0
+//1 2 3

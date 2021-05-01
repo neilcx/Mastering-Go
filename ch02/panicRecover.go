@@ -27,3 +27,10 @@ func main() {
 	a()
 	fmt.Println("main() ended!")
 }
+
+
+//Inside a()
+//About to call b()
+//Inside b()
+//Recover inside a()!
+//main() ended!

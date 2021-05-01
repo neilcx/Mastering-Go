@@ -12,3 +12,10 @@ int main(int argc, char **argv) {
 	printf("It worked!\n");
 	return 0;
 }
+
+//➜  ch02 git:(master) ✗ gcc -o willUseGo willUseGo.c ./usedByC.o
+//➜  ch02 git:(master) ✗ ./willUseGo
+//About to call a Go function!
+//A Go function!
+//Product: 276
+//It worked!
