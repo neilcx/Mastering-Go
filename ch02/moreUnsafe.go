@@ -23,7 +23,7 @@ func main() {
 	memoryAddress = uintptr(unsafe.Pointer(pointer)) + unsafe.Sizeof(array[0])
 	fmt.Println()
 
-	//ch02 git:(master) ✗ go run moreUnsafe.go
+	//ch02 git:(master) ✗ go  run moreUnsafe.go
 	//0 8
 	//1 -2 3 4
 	//One more: 824634166976
