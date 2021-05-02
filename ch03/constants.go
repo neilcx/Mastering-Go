@@ -30,11 +30,14 @@ func main() {
 		One
 		Two
 		Three
-		Four
+		XI
 	)
 
 	fmt.Println(One)
 	fmt.Println(Two)
+
+	fmt.Println(Three)
+	fmt.Println(XI)
 
 	const (
 		p2_0 Power2 = 1 << iota

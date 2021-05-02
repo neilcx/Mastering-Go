@@ -15,7 +15,7 @@ func main() {
 	}
 
 	myTime = os.Args[1]
-	d, err := time.Parse("15:04", myTime)
+	d, err := time.Parse("22:11", myTime)
 	if err == nil {
 		fmt.Println("Full:", d)
 		fmt.Println("Time:", d.Hour(), d.Minute())
@@ -23,3 +23,7 @@ func main() {
 		fmt.Println(err)
 	}
 }
+
+// go run parseTime.go 13:41
+//Full: 0000-01-01 13:41:00 +0000 UTC
+//Time: 13 41

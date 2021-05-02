@@ -24,3 +24,8 @@ func main() {
 		fmt.Println(err)
 	}
 }
+
+
+//go run parseDate.go "10 May 2020"
+//Full: 2021-05-10 00:00:00 +0000 UTC
+//Time: 10 May 2021

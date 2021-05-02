@@ -27,6 +27,7 @@ func main() {
 	fmt.Println("pJ value:", *pJ)
 
 	*pI = 123456
+	fmt.Println("i:", i)
 	*pI--
 	fmt.Println("i:", i)
 

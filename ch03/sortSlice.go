@@ -13,6 +13,13 @@ type aStructure struct {
 
 func main() {
 
+	cSlice := make([]int, 2)
+	fmt.Println(cSlice)
+	cSlice = nil
+	fmt.Println(cSlice)
+
+	fmt.Println("========\n")
+
 	mySlice := make([]aStructure, 0)
 	mySlice = append(mySlice, aStructure{"Mihalis", 180, 90})
 	mySlice = append(mySlice, aStructure{"Bill", 134, 45})

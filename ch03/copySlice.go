@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"reflect"
 )
 
 func main() {
@@ -35,7 +36,11 @@ func main() {
 
 	array5 := [5]int{5, -5, 5, -5, 5}
 	s7 := []int{7, 7, -7, -7, 7, -7, 7}
+	fmt.Println(reflect.TypeOf(s7))
+	fmt.Println(reflect.TypeOf(array5))
 	copy(array5[0:], s7)
 	fmt.Println("array5:", array5)
 	fmt.Println("s7:", s7)
+	fmt.Println(reflect.TypeOf(s7))
+	fmt.Println(reflect.TypeOf(array5))
 }
