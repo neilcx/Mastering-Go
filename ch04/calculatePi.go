@@ -76,7 +76,7 @@ func main() {
 
 	temp, _ := strconv.ParseUint(arguments[1], 10, 32)
 	precision = uint(temp) * 3
-
+	fmt.Println(precision)
 	PI := Pi(precision)
 	fmt.Println(PI)
 }

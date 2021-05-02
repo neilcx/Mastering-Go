@@ -22,7 +22,7 @@ func main() {
 
 	pSlice := [4]XYZ{}
 	pSlice[2] = p1
-	pSlice[0] = p2
+	pSlice[0] = p2 // copied to pSlice,
 	fmt.Println(pSlice)
 	p2 = XYZ{1, 2, 3}
 	fmt.Println(pSlice)

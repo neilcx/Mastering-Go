@@ -12,34 +12,34 @@ func main() {
 	upper := s.ToUpper("Hello there!")
 	f("To Upper: %s\n", upper)
 	f("To Lower: %s\n", s.ToLower("Hello THERE"))
-
+	f("\n")
 	f("%s\n", s.Title("tHis wiLL be A title!"))
-
+	f("\n")
 	f("EqualFold: %v\n", s.EqualFold("Mihalis", "MIHAlis"))
 	f("EqualFold: %v\n", s.EqualFold("Mihalis", "MIHAli"))
-
+	f("\n")
 	f("Prefix: %v\n", s.HasPrefix("Mihalis", "Mi"))
 	f("Prefix: %v\n", s.HasPrefix("Mihalis", "mi"))
 	f("Suffix: %v\n", s.HasSuffix("Mihalis", "is"))
 	f("Suffix: %v\n", s.HasSuffix("Mihalis", "IS"))
-
+	f("\n")
 	f("Index: %v\n", s.Index("Mihalis", "ha"))
 	f("Index: %v\n", s.Index("Mihalis", "Ha"))
 	f("Count: %v\n", s.Count("Mihalis", "i"))
 	f("Count: %v\n", s.Count("Mihalis", "I"))
 	f("Repeat: %s\n", s.Repeat("ab", 5))
-
+	f("\n")
 	f("TrimSpace: %s\n", s.TrimSpace(" \tThis is a line. \n"))
 	f("TrimLeft: %s", s.TrimLeft(" \tThis is a\t line. \n", "\n\t "))
 	f("TrimRight: %s\n", s.TrimRight(" \tThis is a\t line. \n", "\n\t "))
-
+	f("\n")
 	f("Compare: %v\n", s.Compare("Mihalis", "MIHALIS"))
 	f("Compare: %v\n", s.Compare("Mihalis", "Mihalis"))
 	f("Compare: %v\n", s.Compare("MIHALIS", "MIHalis"))
-
+	f("\n")
 	f("Fields: %v\n", s.Fields("This is a string!"))
 	f("Fields: %v\n", s.Fields("Thisis\na\tstring!"))
-
+	f("\n")
 	f("%s\n", s.Split("abcd efg", ""))
 	f("%s\n", s.Replace("abcd efg", "", "_", -1))
 	f("%s\n", s.Replace("abcd efg", "", "_", 4))

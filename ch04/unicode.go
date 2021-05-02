@@ -16,3 +16,15 @@ func main() {
 		}
 	}
 }
+
+//go run unicode.go
+//Not printable!
+//Not printable!
+//a
+//b
+//P
+//Not printable!
+//#
+//P
+//)
+//Not printable!

@@ -14,13 +14,14 @@ func main() {
 	for i := 0; i < len(sLiteral); i++ {
 		fmt.Printf("%x ", sLiteral[i])
 	}
-	fmt.Println()
+	fmt.Print("\n\n")
 
-	fmt.Printf("q: %q\n", sLiteral)
-	fmt.Printf("+q: %+q\n", sLiteral)
-	fmt.Printf(" x: % x\n", sLiteral)
+	fmt.Printf("q: \t%q\n", sLiteral)
+	fmt.Printf("+q: \t%+q\n", sLiteral)
+	fmt.Printf(" x: \t% x\n", sLiteral)
 
 	fmt.Printf("s: As a string: %s\n", sLiteral)
+	fmt.Print("\n\n")
 
 	s2 := "€£³"
 	for x, y := range s2 {
@@ -28,6 +29,7 @@ func main() {
 	}
 
 	fmt.Printf("s2 length: %d\n", len(s2))
+	fmt.Print("\n\n")
 
 	const s3 = "ab12AB"
 	fmt.Println("s3:", s3)

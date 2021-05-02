@@ -54,3 +54,9 @@ func main() {
 		}
 	}
 }
+
+//go run selectColumn.go 2 file1.txt
+//file1.txt
+//is
+//simplifies
+//providing

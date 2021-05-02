@@ -59,7 +59,7 @@ func main() {
 			} else {
 				notAMatch++
 			}
-			continue
+			continue //unnecessary
 		}
 	}
 	fmt.Println(notAMatch, "lines did not match!")
