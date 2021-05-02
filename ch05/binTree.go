@@ -26,6 +26,7 @@ func create(n int) *Tree {
 	rand.Seed(time.Now().Unix())
 	for i := 0; i < 2*n; i++ {
 		temp := rand.Intn(n * 2)
+		fmt.Printf("new value is %d\n", temp)
 		t = insert(t, temp)
 	}
 	return t

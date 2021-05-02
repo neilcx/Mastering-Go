@@ -25,12 +25,31 @@ func main() {
 
 	e1 := values.PushBack("One")
 	e2 := values.PushBack("Two")
+	fmt.Printf("====\n")
+	printList(values)
+
+	fmt.Printf("====\n")
 	values.PushFront("Three")
+
+	fmt.Printf("====\n")
+	printList(values)
+
+	fmt.Printf("====\n")
 	values.InsertBefore("Four", e1)
+	fmt.Printf("====\n")
+	printList(values)
+
+	fmt.Printf("====\n")
 	values.InsertAfter("Five", e2)
+	fmt.Printf("====\n")
+	printList(values)
+
+	fmt.Printf("====\n")
 	values.Remove(e2)
 	values.Remove(e2)
+	//printList(values)
 	values.InsertAfter("FiveFive", e2)
+	printList(values)
 	values.PushBackList(values)
 
 	printList(values)
