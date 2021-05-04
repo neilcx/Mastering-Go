@@ -23,7 +23,11 @@ func main() {
 	x := 100
 	xRefl := reflect.ValueOf(&x).Elem()
 	xType := xRefl.Type()
+
+	vRefT := reflect.TypeOf(x)
+	fmt.Printf("The xRefl of x is %v.\n", xRefl)
 	fmt.Printf("The type of x is %s.\n", xType)
+	fmt.Printf("The vRefT of x is %s.\n", vRefT)
 	//	fmt.Printf("The type of x is %s.\n", reflect.TypeOf(x))
 
 	A := a{100, 200.12, "Struct a"}

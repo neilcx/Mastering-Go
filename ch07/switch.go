@@ -18,15 +18,15 @@ type rectangle struct {
 }
 
 func tellInterface(x interface{}) {
-	switch v := x.(type) {
+	switch x.(type) {
 	case square:
 		fmt.Println("This is a square!")
 	case circle:
-		fmt.Printf("%v is a circle!\n", v)
+		fmt.Printf("%v is a circle!\n", x)
 	case rectangle:
 		fmt.Println("This is a rectangle!")
 	default:
-		fmt.Printf("Unknown type %T!\n", v)
+		fmt.Printf("Unknown type %T!\n", x)
 	}
 }
 

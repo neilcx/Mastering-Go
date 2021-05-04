@@ -22,6 +22,6 @@ func main() {
 	i := myInt.(int)
 	fmt.Println("No cheking:", i)
 
-	j := myInt.(bool)
+	j,_ := myInt.(bool)
 	fmt.Println(j)
 }

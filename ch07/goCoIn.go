@@ -23,11 +23,11 @@ func (a second) shared() {
 }
 
 func main() {
-	first{}.F()
-	second{}.shared()
+	first{}.F() //This is shared() from first!
+	second{}.shared() //This is shared() from second!
 	i := second{}
 	j := i.first
-	j.F()
-	// (i.first).F()
+	j.F() //This is shared() from first!
+	(i.first).F() //This is shared() from first!
 	// (second{}.first).F()
 }

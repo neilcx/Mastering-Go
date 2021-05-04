@@ -24,4 +24,5 @@ func main() {
 	j := twoInts{X: -5, Y: -2}
 	fmt.Println(regularFunction(i, j))
 	fmt.Println(i.method(j))
+	fmt.Println(j.method(j))
 }
