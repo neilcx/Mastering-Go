@@ -14,4 +14,5 @@ func main() {
 	fmt.Println("sq:", *sq)
 
 	fmt.Println("sq:", sq)
+
 }

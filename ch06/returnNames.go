@@ -28,6 +28,19 @@ func minMax(x, y int) (min, max int) {
 	return min, max
 }
 
+
+func anotherMinMax(x, y int) (int, int) {
+	var min, max int
+	if x > y {
+		min = y
+		max = x
+	} else {
+		min = x
+		max = y
+	}
+	return min, max
+}
+
 func main() {
 	arguments := os.Args
 	if len(arguments) < 3 {
@@ -45,4 +58,9 @@ func main() {
 	fmt.Println(namedMinMax(a1, a2))
 	min, max = namedMinMax(a1, a2)
 	fmt.Println(min, max)
+
+	fmt.Println(anotherMinMax(a1, a2))
+	min, max = anotherMinMax(a1, a2)
+	fmt.Println(min, max)
+
 }

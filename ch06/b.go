@@ -3,6 +3,7 @@ package b
 import (
 	"a"
 	"fmt"
+	"log/syslog"
 )
 
 func init() {
@@ -12,4 +13,5 @@ func init() {
 func FromB() {
 	fmt.Println("fromB()")
 	a.FromA()
+	syslog.New(0, "")
 }

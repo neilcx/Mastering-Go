@@ -13,4 +13,7 @@ func main() {
 	fmt.Println(getPtr(&x))
 	x = 12
 	fmt.Println(getPtr(&x))
+
+	y := 12.2
+	fmt.Println( y * y )
 }

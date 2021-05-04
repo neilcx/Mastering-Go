@@ -7,6 +7,7 @@ import (
 )
 
 func doubleSquare(x int) (int, int) {
+	fmt.Println("in function doubleSquare")
 	return x * 2, x * x
 }
 
