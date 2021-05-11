@@ -25,9 +25,10 @@ func main() {
 	scanner := bufio.NewScanner(f)
 	for scanner.Scan() {
 		line := scanner.Text()
-		line = strings.Replace(line, " ", "", -1)
-		line = strings.Replace(line, "SYS_", "", -1)
-		temp := strings.ToLower(strings.Split(line, "=")[0])
+		line = strings.Replace(line, " ", "", -1) // remove spaces
+		line = strings.Replace(line, "SYS_", "", -1) // remove prefix
+		temp := strings.ToLower(strings.Split(line, "=")[0]) //split by = into x parts , get the first  part, to lower
+
 		SYSTEMCALLS = append(SYSTEMCALLS, temp)
 		maxSyscalls++
 	}
@@ -67,6 +68,7 @@ func main() {
 			forCount++
 		}
 
+		//continue the execution of the program that is being traced
 		err = syscall.PtraceSyscall(pid, 0)
 		if err != nil {
 			fmt.Println("PtraceSyscall:", err)
@@ -78,7 +80,8 @@ func main() {
 			fmt.Println("Wait4:", err)
 			return
 		}
-		before = !before
+		before = !before // ? only once , so for for each syscall twice ?
+
 	}
 
 	for i, x := range COUNTER {

@@ -26,7 +26,7 @@ func main() {
 	}
 	defer f2.Close()
 	n, err := f2.WriteString(string(s))
-	fmt.Printf("wrote %d bytes\n", n)
+	fmt.Printf("f2 wrote %d bytes\n", n)
 
 	f3, err := os.Create("f3.txt")
 	if err != nil {
@@ -35,7 +35,7 @@ func main() {
 	}
 	w := bufio.NewWriter(f3)
 	n, err = w.WriteString(string(s))
-	fmt.Printf("wrote %d bytes\n", n)
+	fmt.Printf("f3 wrote %d bytes\n", n)
 	w.Flush()
 
 	f4 := "f4.txt"
@@ -55,5 +55,5 @@ func main() {
 		fmt.Println(err)
 		return
 	}
-	fmt.Printf("wrote %d bytes\n", n)
+	fmt.Printf("f5 wrote %d bytes\n", n)
 }

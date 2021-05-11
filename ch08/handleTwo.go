@@ -30,6 +30,6 @@ func main() {
 
 	for {
 		fmt.Printf(".")
-		time.Sleep(20 * time.Second)
+		time.Sleep(4 * time.Second)
 	}
 }

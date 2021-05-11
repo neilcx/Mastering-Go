@@ -14,7 +14,14 @@ func printFile(filename string) error {
 	}
 	defer f.Close()
 	scanner := bufio.NewScanner(f)
+
+	scanner.Scan()
+	io.WriteString(os.Stdout, scanner.Text())
+	io.WriteString(os.Stdout, "\n")
+
+
 	for scanner.Scan() {
+		//time.Sleep(1 * time.Second)
 		io.WriteString(os.Stdout, scanner.Text())
 		io.WriteString(os.Stdout, "\n")
 	}
@@ -37,3 +44,9 @@ func main() {
 		}
 	}
 }
+
+
+//➜  ch08 git:(master) ✗ go run cat.go goFind.go
+//# command-line-arguments
+//./goFind.go:34:6: main redeclared in this block
+//previous declaration at ./cat.go:31:6

@@ -11,7 +11,7 @@ var minusD bool = false
 var minusF bool = false
 
 func walk(path string, info os.FileInfo, err error) error {
-	fileInfo, err := os.Stat(path)
+	fileInfo, err := os.Stat(path)  // all files under the "path"
 	if err != nil {
 		return err
 	}

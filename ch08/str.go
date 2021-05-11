@@ -26,8 +26,8 @@ func main() {
 		fmt.Printf("Read %s Bytes: %d\n", b, n)
 	}
 
-	s := strings.NewReader("This is an error!\n")
-	fmt.Println("r length:", s.Len())
+	s := strings.NewReader("This is an error message.\n")
+	fmt.Println("s length:", s.Len())
 	n, err := s.WriteTo(os.Stderr)
 
 	if err != nil {

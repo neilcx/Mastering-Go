@@ -27,6 +27,9 @@ func charByChar(file string) error {
 		}
 
 		for _, x := range line {
+			if x == '\n' {
+				fmt.Print("newline")
+			}
 			fmt.Println(string(x))
 		}
 	}
