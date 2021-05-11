@@ -16,3 +16,6 @@ func main() {
 	fmt.Println("-k:", valueK)
 	fmt.Println("-O:", valueO)
 }
+
+
+// go run simpleFlag.go -O=100 -k=false
