@@ -23,3 +23,20 @@ func main() {
 
 	time.Sleep(1 * time.Second)
 }
+
+
+
+
+//go run simple.go
+//0123410 11 12 13 14 56789
+//15 16 17 18 19
+//
+//
+//go run simple.go
+//
+//10 11 12 13 14 15 16 17 18 19 0123456789
+//
+//
+//go run simple.go
+//0123456789
+//10 11 12 13 14 15 16 17 18 19                                                                                                                                                                          ➜  ch09 git:(master)

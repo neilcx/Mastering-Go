@@ -32,6 +32,7 @@ func second(out chan<- int, in <-chan int) {
 		_, ok := DATA[x]
 		if ok {
 			CLOSEA = true
+
 		} else {
 			DATA[x] = true
 			out <- x
