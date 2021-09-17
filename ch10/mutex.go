@@ -46,9 +46,9 @@ func main() {
 	fmt.Printf("%d ", read())
 	for i := 0; i < numGR; i++ {
 		waitGroup.Add(1)
-		go func(i int) {
+		go func(k int) {
 			defer waitGroup.Done()
-			change(i)
+			change(k)
 			fmt.Printf("-> %d", read())
 		}(i)
 	}

@@ -10,6 +10,7 @@ var m sync.Mutex
 func function() {
 	m.Lock()
 	fmt.Println("Locked!")
+	m.Unlock() // added
 }
 
 func main() {
@@ -28,4 +29,6 @@ func main() {
 	w.Add(1)
 
 	w.Wait()
+
+	fmt.Println("Finished !")
 }

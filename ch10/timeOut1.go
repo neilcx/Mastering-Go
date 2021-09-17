@@ -32,3 +32,8 @@ func main() {
 		fmt.Println("timeout c2")
 	}
 }
+
+//
+// timeout c1
+// c2 ok
+// timeout c2 // X does not contain this line

@@ -43,3 +43,13 @@ func main() {
 	fmt.Println("Exiting...")
 	end <- true
 }
+
+
+// sample out put
+// go run select.go 10
+//Going to create 10 random numbers.
+//9 15 5 16 2 4 0 0 19 0
+//time.After()!
+//Exiting...
+
+

@@ -26,3 +26,22 @@ func main() {
 		}
 	}
 }
+//go run bufChannel.go
+//Not enough space for 5
+//Not enough space for 6
+//Not enough space for 7
+//Not enough space for 8
+//Not enough space for 9
+//0
+//1
+//2
+//3
+//4
+//Nothing more to be done!
+//Nothing more to be done!
+//Nothing more to be done!
+//Nothing more to be done!
+//Nothing more to be done!
+//Nothing more to be done!
+//Nothing more to be done!
+//Nothing more to be done!

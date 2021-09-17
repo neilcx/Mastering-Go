@@ -16,6 +16,8 @@ func timeout(w *sync.WaitGroup, t time.Duration) bool {
 		w.Wait()
 	}()
 
+	// if t less than 5s, then return true
+	// otherwise false
 	select {
 	case <-temp:
 		return false
@@ -56,3 +58,10 @@ func main() {
 		fmt.Println("OK!")
 	}
 }
+
+
+//go run timeOut2.go 5010
+//Timeout period is 5.01s
+//Timed out!
+//OK!
+

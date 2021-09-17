@@ -54,3 +54,7 @@ func main() {
 		close(f)
 	}
 }
+
+
+// f channel is a signal channel used for ending the goroutine
+// when the real work is finished.
