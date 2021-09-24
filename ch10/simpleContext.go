@@ -14,13 +14,13 @@ func f1(t int) {
 	defer cancel()
 
 	go func() {
-		time.Sleep(4 * time.Second)
+		time.Sleep(1 * time.Second)
 		cancel()
 	}()
 
 	select {
 	case <-c1.Done():
-		fmt.Println("f1():", c1.Err())
+		fmt.Println("f1()::::", c1.Err())
 		return
 	case r := <-time.After(time.Duration(t) * time.Second):
 		fmt.Println("f1():", r)
@@ -34,13 +34,13 @@ func f2(t int) {
 	defer cancel()
 
 	go func() {
-		time.Sleep(4 * time.Second)
+		time.Sleep(2 * time.Second)
 		cancel()
 	}()
 
 	select {
 	case <-c2.Done():
-		fmt.Println("f2():", c2.Err())
+		fmt.Println("f2()::::", c2.Err())
 		return
 	case r := <-time.After(time.Duration(t) * time.Second):
 		fmt.Println("f2():", r)
@@ -55,13 +55,13 @@ func f3(t int) {
 	defer cancel()
 
 	go func() {
-		time.Sleep(4 * time.Second)
+		time.Sleep(5 * time.Second)
 		cancel()
 	}()
 
 	select {
 	case <-c3.Done():
-		fmt.Println("f3():", c3.Err())
+		fmt.Println("f3()::::", c3.Err())
 		return
 	case r := <-time.After(time.Duration(t) * time.Second):
 		fmt.Println("f3():", r)

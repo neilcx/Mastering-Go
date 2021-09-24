@@ -53,8 +53,14 @@ func main() {
 		go func() {
 			defer w.Done()
 			set(rand.Intn(10 * n))
+			if rand.Intn(10*n) % 3 == 0 {
+				fmt.Printf("\nthe value: %d\n", read())
+			}
 		}()
 	}
 	w.Wait()
 	fmt.Printf("\nLast value: %d\n", read())
 }
+
+// only read once
+// after adding if x % 3 == 0 statement, could read more than once randomly
