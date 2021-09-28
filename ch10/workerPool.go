@@ -34,6 +34,8 @@ func worker(w *sync.WaitGroup) {
 	w.Done()
 }
 
+//generate the required number of worker()
+//goroutines for processing all requests
 func makeWP(n int) {
 	var w sync.WaitGroup
 	for i := 0; i < n; i++ {
@@ -67,13 +69,21 @@ func main() {
 		return
 	}
 
+	fmt.Println("Capacity of nJobs:", nJobs)
+
 	nWorkers, err := strconv.Atoi(os.Args[2])
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
 
+	fmt.Println("Capacity of nWorkers:", nWorkers)
+
+	// create x clients with id and value pair, then send to channel
 	go create(nJobs)
+
+	// does not allow the program to end until somebody writes something to the
+	// finished channel.
 	finished := make(chan interface{})
 	go func() {
 		for d := range data {
