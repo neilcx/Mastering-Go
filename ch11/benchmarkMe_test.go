@@ -66,12 +66,16 @@ func BenchmarkFiboIII(b *testing.B) {
 	_ = fibo3(b.N)
 }
 
+
+
+// i keep changes
 // This benchmark function never converges
 // func BenchmarkFiboI(b *testing.B) {
 //	for i := 0; i < b.N; i++ {
 //		_ = fibo1(i)
 //	}
 // }
+
 
 // This benchmark function never converges
 // func BenchmarkFiboII(b *testing.B) {

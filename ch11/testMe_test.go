@@ -57,4 +57,9 @@ func TestF2(t *testing.T) {
 	if f2(10) != 55 {
 		t.Error(`f2(10) != 55`)
 	}
+
+	//if f2(-1) != -1 {
+	//	t.Error(`f2(10) != 55`)
+	//}
+
 }

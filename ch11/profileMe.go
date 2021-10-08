@@ -33,6 +33,8 @@ func fibo2(n int) int {
 }
 
 func N1(n int) bool {
+
+	// use square root is better
 	k := math.Floor(float64(n/2 + 1))
 	for i := 2; i < int(k); i++ {
 		if (n % i) == 0 {

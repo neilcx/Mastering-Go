@@ -1,6 +1,11 @@
 package testMe
 
+
 func f1(n int) int {
+
+	if n < 0 {
+		return -1
+	}
 	if n == 0 {
 		return 0
 	}
@@ -11,6 +16,11 @@ func f1(n int) int {
 }
 
 func f2(n int) int {
+
+	//if n < 0 {
+	//	return -1
+	//}
+
 	if n == 0 {
 		return 0
 	}
@@ -25,7 +35,7 @@ func s1(s string) int {
 	if s == "" {
 		return 0
 	}
-	n := 1
+	n := 0
 	for range s {
 		n++
 	}

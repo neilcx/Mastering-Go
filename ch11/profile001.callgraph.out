@@ -1,0 +1,483 @@
+positions: instr line
+events: cpu(ms)
+
+ob=
+fl=(1) /Users/chenxi1/workspace/github/Mastering-Go/ch11/profileMe.go
+fn=(1) main.N2
+0x10bde33 49 2430
+
+ob=
+fl=(1)
+fn=(2) main.N1
+-114 40 1160
+
+ob=
+fl=(2) /usr/local/go/src/runtime/preempt_amd64.s
+fn=(3) runtime.asyncPreempt
+-387153 7 200
+
+ob=
+fl=(3) /usr/local/go/src/runtime/sys_darwin.go
+fn=(4) runtime.nanotime1
+-71529 260 150
+
+ob=
+fl=(1)
+fn=(1)
++458782 48 100
++11 49 100
+
+ob=
+fl=(3)
+fn=(5) runtime.usleep
+-458992 239 80
+
+ob=
+fl=(1)
+fn=(2)
++458873 40 60
+
+ob=
+fl=(3)
+fn=(6) runtime.kevent
+-457777 355 30
+
+ob=
+fl=(4) /usr/local/go/src/runtime/memclr_amd64.s
+fn=(7) runtime.memclrNoHeapPointers
++68628 102 30
+
+ob=
+fl=(1)
+fn=(2)
++389138 39 30
+
+ob=
+fl=(3)
+fn=(8) runtime.pthread_cond_timedwait_relative_np
+-457286 397 10
+
+ob=
+fl=(3)
+fn=(9) runtime.pthread_cond_signal
++80 404 10
+
+ob=
+fl=(5) /usr/local/go/src/time/time.go
+fn=(10) time.Time.After
++274504 242 10
+
+ob=
+fl=(6) /usr/local/go/src/runtime/lock_sema.go
+fn=(11) runtime.notewakeup
+-554344 153 0
+cfl=(7) /usr/local/go/src/runtime/os_darwin.go
+cfn=(12) runtime.semawakeup
+calls=0 -409845 73
+* * 10
+
+ob=
+fl=(6)
+fn=(13) runtime.notetsleep_internal
++628 224 0
+cfl=(7)
+cfn=(14) runtime.semasleep
+calls=0 +144259 57
+* * 10
+
+ob=
+fl=(6)
+fn=(15) runtime.notetsleep
++443 275 0
+cfl=(6)
+cfn=(13)
+calls=0 * 224
+* * 10
+
+ob=
+fl=(8) /usr/local/go/src/runtime/malloc.go
+fn=(16) runtime.mallocgc
++6349 1046 0
+cfl=(9) /usr/local/go/src/runtime/asm_amd64.s
+cfn=(17) runtime.systemstack
+calls=0 +334654 370
+* * 30
+
+ob=
+fl=(8)
+fn=(18) runtime.largeAlloc
++445 1152 0
+cfl=(10) /usr/local/go/src/runtime/mheap.go
+cfn=(19) runtime.(*mheap).alloc
+calls=0 +95500 876
+* * 30
+
+ob=
+fl=(10)
+fn=(19)
++95055 876 0
+cfl=(4)
+cfn=(7)
+calls=0 +340043 102
+* * 30
+
+ob=
+fl=(11) /usr/local/go/src/runtime/netpoll_kqueue.go
+fn=(20) runtime.netpoll
++40141 120 0
+cfl=(3)
+cfn=(6)
+calls=0 +176360 355
+* * 30
+
+ob=
+fl=(7)
+fn=(14)
++1198 57 0
+cfl=(3)
+cfn=(8)
+calls=0 +136699 397
+* * 10
+
+ob=
+fl=(7)
+fn=(12)
++240 73 0
+cfl=(3)
+cfn=(9)
+calls=0 +135581 404
+* * 10
+
+ob=
+fl=(12) /usr/local/go/src/runtime/proc.go
+fn=(21) runtime.main
++21614 203 0
+cfl=(1)
+cfn=(22) main.main
+calls=0 +593128 76
+* * 2710
+cfl=(1)
+cfn=(22)
+calls=0 +592918 67
+* * 1370
+cfl=(1)
+cfn=(22)
+calls=0 +593970 106
+* * 30
+cfl=(1)
+cfn=(22)
+calls=0 +594123 113
+* * 10
+
+ob=
+fl=(12)
+fn=(23) runtime.mstart
++10268 1062 0
+cfl=(12)
+cfn=(24) runtime.mstart1
+calls=0 +10489 1097
+* * 230
+
+ob=
+fl=(12)
+fn=(24)
++221 1097 0
+cfl=(12)
+cfn=(25) runtime.sysmon
+calls=0 +32989 4480
+* * 140
+cfl=(12)
+cfn=(25)
+calls=0 +32983 4479
+* * 80
+cfl=(12)
+cfn=(25)
+calls=0 +33900 4498
+* * 10
+
+ob=
+fl=(12)
+fn=(26) runtime.startm
++5712 1890 0
+cfl=(6)
+cfn=(11)
+calls=0 -176602 153
+* * 10
+
+ob=
+fl=(12)
+fn=(27) runtime.findrunnable
++4520 2329 0
+cfl=(11)
+cfn=(20)
+calls=0 -39253 120
+* * 30
++27 2331 0
+cfl=(13) /usr/local/go/src/runtime/time_nofake.go
+cfn=(28) runtime.nanotime
+calls=0 +27 19
+* * 10
+
+ob=
+fl=(13)
+fn=(28)
+* 19 0
+cfl=(3)
+cfn=(4)
+calls=0 +91522 260
+* * 10
+
+ob=
+fl=(12)
+fn=(29) runtime.resetspinning
++2365 2421 0
+cfl=(12)
+cfn=(30) runtime.wakep
+calls=0 +2365 1959
+* * 10
+
+ob=
+fl=(12)
+fn=(30)
+* 1959 0
+cfl=(12)
+cfn=(26)
+calls=0 -6912 1890
+* * 10
+
+ob=
+fl=(12)
+fn=(31) runtime.schedule
++1195 2533 0
+cfl=(12)
+cfn=(29)
+calls=0 * 2421
+* * 10
++30 2526 0
+cfl=(12)
+cfn=(27)
+calls=0 -3587 2329
+* * 30
+cfl=(12)
+cfn=(27)
+calls=0 -3560 2331
+* * 10
+
+ob=
+fl=(12)
+fn=(32) runtime.park_m
++1409 2696 0
+cfl=(12)
+cfn=(31)
+calls=0 * 2526
+* * 40
+cfl=(12)
+cfn=(31)
+calls=0 -30 2533
+* * 10
+
+ob=
+fl=(12)
+fn=(25)
++17504 4479 0
+cfl=(3)
+cfn=(5)
+calls=0 +86324 239
+* * 80
+
+ob=
+fl=(13)
+fn=(28)
++6 19 0
+cfl=(3)
+cfn=(4)
+calls=0 +69019 260
+* * 140
+
+ob=
+fl=(12)
+fn=(25)
+* 4480 0
+cfl=(13)
+cfn=(28)
+calls=0 * 19
+* * 140
++911 4498 0
+cfl=(6)
+cfn=(15)
+calls=0 -208299 275
+* * 10
+
+ob=
+fl=(14) /usr/local/go/src/runtime/slice.go
+fn=(33) runtime.makeslice
++33914 49 0
+cfl=(8)
+cfn=(16)
+calls=0 -202861 1046
+* * 30
+
+ob=
+fl=(8)
+fn=(34) runtime.mallocgc.func1
++78938 1047 0
+cfl=(8)
+cfn=(18)
+calls=0 -236330 1152
+* * 30
+
+ob=
+fl=(9)
+fn=(35) runtime.mcall
++12453 318 0
+cfl=(12)
+cfn=(32)
+calls=0 -131273 2696
+* * 50
+
+ob=
+fl=(9)
+fn=(17)
++139 370 0
+cfl=(8)
+cfn=(34)
+calls=0 -12453 1047
+* * 30
+
+ob=
+fl=(15) /usr/local/go/src/compress/gzip/gzip.go
+fn=(36) compress/gzip.(*Writer).Write
++358745 157 0
+cfl=(5)
+cfn=(10)
+calls=0 +218619 242
+* * 10
+
+ob=
+fl=(16) /usr/local/go/src/runtime/pprof/pprof.go
+fn=(37) runtime/pprof.writeHeapInternal
++14881 559 0
+cfl=(17) /usr/local/go/src/runtime/pprof/protomem.go
+cfn=(38) runtime/pprof.writeHeapProto
+calls=0 +37820 65
+* * 10
+
+ob=
+fl=(18) /usr/local/go/src/runtime/pprof/proto.go
+fn=(39) runtime/pprof.(*profileBuilder).build
++8910 379 0
+cfl=(15)
+cfn=(36)
+calls=0 -14881 157
+* * 10
+
+ob=
+fl=(17)
+fn=(38)
++14029 65 0
+cfl=(18)
+cfn=(39)
+calls=0 * 379
+* * 10
+
+ob=
+fl=(1)
+fn=(2)
++4755 39 0
+cfl=(2)
+cfn=(3)
+calls=0 -382378 7
+* * 10
++19 40 0
+cfl=(2)
+cfn=(3)
+calls=0 -387133 7
+* * 110
+
+ob=
+fl=(1)
+fn=(1)
++111 49 0
+cfl=(2)
+cfn=(3)
+calls=0 -387152 7
+* * 20
++3 49 0
+cfl=(2)
+cfn=(3)
+calls=0 -387263 7
+* * 60
+
+ob=
+fl=(1)
+fn=(22)
++239 67 0
+cfl=(1)
+cfn=(2)
+calls=0 -113 40
+* * 1160
+cfl=(1)
+cfn=(2)
+calls=0 -114 40
+* * 110
+cfl=(1)
+cfn=(2)
+calls=0 -121 40
+* * 60
+cfl=(1)
+cfn=(2)
+calls=0 -132 39
+* * 30
+cfl=(1)
+cfn=(2)
+calls=0 -133 39
+* * 10
++210 76 0
+cfl=(1)
+cfn=(1)
+calls=0 -238 49
+* * 2430
+cfl=(1)
+cfn=(1)
+calls=0 -252 48
+* * 100
+cfl=(1)
+cfn=(1)
+calls=0 -241 49
+* * 100
+cfl=(1)
+cfn=(1)
+calls=0 -239 49
+* * 60
+cfl=(1)
+cfn=(1)
+calls=0 -242 49
+* * 20
++842 106 0
+cfl=(14)
+cfn=(33)
+calls=0 -493432 49
+* * 30
++153 113 0
+cfl=(16)
+cfn=(40) runtime/pprof.WriteHeapProfile
+calls=0 +153 508
+* * 10
+
+ob=
+fl=(16)
+fn=(40)
+* 508 0
+cfl=(16)
+cfn=(41) runtime/pprof.writeHeap
+calls=0 * 519
+* * 10
+
+ob=
+fl=(16)
+fn=(41)
+* 519 0
+cfl=(16)
+cfn=(37)
+calls=0 -29271 559
+* * 10

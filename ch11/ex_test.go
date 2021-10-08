@@ -19,3 +19,5 @@ func ExampleS1() {
 	// 8
 	// 0
 }
+
+//go test ex.go ex_test.go -v
