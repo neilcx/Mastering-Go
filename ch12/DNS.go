@@ -48,3 +48,9 @@ func main() {
 		}
 	}
 }
+
+
+//➜  ch12 git:(master) ✗ go run DNS.go 10.53.61.180
+//qingfengdadi.com.
+//➜  ch12 git:(master) ✗ go run DNS.go google.com
+//172.217.24.14
