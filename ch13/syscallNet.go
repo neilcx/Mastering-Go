@@ -7,6 +7,10 @@ import (
 )
 
 func main() {
+
+	//	AF_INET                           = 0x2
+	// 	SOCK_RAW                          = 0x3
+	// 	IPPROTO_ICMP                      = 0x1
 	fd, err := syscall.Socket(syscall.AF_INET, syscall.SOCK_RAW, syscall.IPPROTO_ICMP)
 	if err != nil {
 		fmt.Println("Error in syscall.Socket:", err)

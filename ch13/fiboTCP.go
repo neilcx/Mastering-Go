@@ -56,6 +56,19 @@ func main() {
 	}
 
 	PORT := ":" + arguments[1]
+	fmt.Printf("port value is : \"%s\"\n", PORT)
+
+    // UDPserver.go
+	//s, err := net.ResolveUDPAddr("udp4", PORT)
+	//connection, err := net.ListenUDP("udp4", s)
+
+    // in otherTCPserver.go
+	//s, err := net.ResolveTCPAddr("tcp", SERVER)
+	//l, err := net.ListenTCP("tcp", s)
+
+	// in TCPserver.go
+	//l, err := net.Listen("tcp", PORT)
+
 	l, err := net.Listen("tcp4", PORT)
 	if err != nil {
 		fmt.Println(err)
